@@ -32,7 +32,7 @@ class People{
 
     public function getPeople(){
         $connectionDb =  getConnect();
-        $result = mysqli_query($connectionDb, "SELECT * FROM `People` WHERE `Id` IN (".getArrayIdsAsStr($this->ids).")");
+        $result = mysqli_query($connectionDb, "SELECT * FROM `People` WHERE `Id` IN (" . getArrayIdsAsStr($this->ids) . ")");
         if(!$result){
             die(mysqli_error($connectionDb));
         }
@@ -46,7 +46,7 @@ class People{
 
     public function deletePeople(){
         $connectionDb =  getConnect();
-        $result = mysqli_query($connectionDb, "DELETE FROM `People` WHERE `Id` IN (".getArrayIdsAsStr($this->ids).")");
+        $result = mysqli_query($connectionDb, "DELETE FROM `People` WHERE `Id` IN (" . getArrayIdsAsStr($this->ids) . ")");
         if(!$result){
             die(mysqli_error($connectionDb));
         }

@@ -31,7 +31,7 @@
     function getArrayIdsAsStr($ids){
         $idsStr = '';
         foreach($ids as $id){
-            $idsStr.= '\''. $id . '\'' . ', ';
+            $idsStr.= '\'' . $id . '\'' . ', ';
         }
         $idsStr = substr($idsStr, 0, -2);
         return $idsStr;
